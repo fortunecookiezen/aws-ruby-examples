@@ -15,13 +15,13 @@ def list_user_names(iam)
   end
 end
 
-puts "User names before creating user " + ARGV[0]
+puts "User names before deleting user " + ARGV[0]
 list_user_names(iam)
 
 # Create a user.
-puts "\nCreating user " + ARGV[0]
+puts "\nDeleting user" + ARGV[0]
 
-iam.create_user({ user_name: user_name })
+iam.delete_user({ user_name: user_name })
 
-puts "\nUser names after creating user " + ARGV[0]
+puts "\nUser names after deleting user " + ARGV[0]
 list_user_names(iam)
